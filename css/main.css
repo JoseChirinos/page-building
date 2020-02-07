@@ -1,0 +1,167 @@
+/* in Produccion insertar este codigo en la cabezera
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>*/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(fonts/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+body{
+	margin:0;
+	font-family: 'Lato';
+}
+/*Colors*/
+.indigo{
+	background: #484745;
+	opacity: 0.7;
+}
+/*Header*/
+header a,a:hover,a:focus,a:active{
+	text-decoration: none;	
+}
+.aportar{
+	font-size: 16px;
+    background-color: #FFC107;
+    color: #2d2d2d;
+    border: 0;
+    box-shadow: 0 5px #FF9A00;
+    border-radius: 5px;
+    padding: 10px 25px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 15;
+}
+.aportar:hover{
+	background-color: #FFB102;
+    box-shadow: 0 4px #FF9A00;
+    top: 16px;
+}
+header{
+	background: url(../img/backs-min.jpg) bottom center;
+    background-size: cover;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+}
+header img{
+	width: auto;
+	position: relative;
+	margin: auto;
+}
+header label{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+header h3{
+    color: #e9eaeb;
+    font-family: 'Lato';
+    font-size: 25px;
+    text-align: initial;
+}
+header h1{
+	font-size: 80px;
+    color: #e9eaeb;
+}
+.front{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.front a{
+	padding: 15px 88px;
+    background: #0078e7;
+    opacity: 1;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.logo img{
+	width: auto;
+}
+.load{
+    width: 100%;
+    height: 40px;
+    background: #ff9a00;
+    position: absolute;
+    bottom: 0;
+}
+.progress{
+	width: 0%;
+	height: 40px;
+	background: #ad006c;
+	-webkit-transition:all 0.5s ease-out;
+	-moz-transition:all 0.5s ease-out;
+	transition:all 0.5s ease-out;
+}
+.social{
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    width: 100px;
+    height: 255px;
+    position: absolute;
+}
+.social span{
+	display: block;
+    font-size: 40px;
+    color: #e9eaeb;
+    margin-bottom: 30px;
+}
+section{
+	display: none;
+	opacity: 0;
+    background: #e9eaeb;
+    font-size: 20px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 16;
+    -webkit-transition:all 0.5s ease-out;
+	-moz-transition:all 0.5s ease-out;
+	transition:all 0.5s ease-out;
+}
+section a{
+	text-align: center;
+	margin-left:50px;
+}
+section textarea{
+	width: 100%;
+	height: 100px;
+	outline: none;
+	resize: none;
+}
+@media(max-width: 760px){
+	.logo img{
+		width: 150px;
+	}
+	.social{
+		right: 0px;
+		width: 50px;
+	}
+	.social span{
+		font-size: 25px;
+	}
+	.aportar{
+		right: 0;
+	    left: 0;
+	    margin: 0px 15px;
+	    bottom: 15px;
+    	top: inherit;
+	}
+	.aportar:hover{
+		background-color: #FFB102;
+	    box-shadow: 0 4px #FF9A00;
+	    bottom: 14px;
+	    top: inherit;
+	}
+	.load{
+		top: 0px;
+	}
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>GooMovil - Comming Soon</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+</head>
+<body>
+	<header>
+		<!--<a href="#" class="aportar"> Sugerir una Idea..!</a>-->
+		<div class="front indigo">
+		</div>
+			<div class="container-fluid">
+				<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 logo">
+					<label for="goomovil"><h3>La mejor guia empresarial de Bolivia ya casi lista para ti...</h3></label><br>
+					<img src="img/logoPromo.png">
+					<h1 class="pr">0%</h1>
+				</div>
+			</div>
+		<div class="social">
+			<a href="https://twitter.com/goomovil"><span class="fa fa-twitter"></span></a>
+			<a href="https://www.facebook.com/goomovil/?ref=br_rs"><span class="fa fa-facebook"></span></a>
+			<!--<a href=""><span class="fa fa-youtube"></span></a>
+			<a href=""><span class="fa fa-google-plus"></span></a>-->
+		</div>
+
+		<div class="load">
+			<div class="progress"></div>
+		</div>
+	</header>
+	<!--
+	<section class="boxsug">
+		<div class="container-fluid">
+				<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 logo">
+					<p>
+						GooMovil, te traera lo mejor de tu ciudad, podras explorar y encontrar las mejores novedades, compartir y comentar tus lugares favoritos...<br>
+						Y a ti que te gustaria tener en la mejor Guia Empresarial de Bolivia?
+					</p>
+</br>
+		<textarea class="txtsug"></textarea>
+		<a href="javascript:obtener()" class="btn">Enviar</a><a href="#" class="btn cancelar">Cancelar</a>
+				</div>
+			</div>
+	</section>
+	-->
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript">
+		var progress=document.querySelector('.progress');
+		var pr = document.querySelector('.pr');
+		var init = 0;
+		var inter;
+		document.body.onload = function(){
+			inter = setInterval(function(){m();},100);
+		}
+		function m(){
+			//console.log('entra');
+			if(init<=99){
+				progress.style.width = init+"%";
+				pr.innerHTML = init+"%";
+				init+=7;
+			}
+			else{
+				clearInterval(inter);
+			}
+    }
+    /*
+		document.querySelector(".aportar").onclick = function(){
+			document.querySelector('.boxsug').style.display ="block";
+			document.querySelector('.boxsug').style.opacity = 1;
+			document.querySelector('.txtsug').focus();
+		}
+		document.querySelector(".cancelar").onclick = function(){
+			document.querySelector('.boxsug').style.display ="none";
+    }
+    */
+		function obtener(){
+			/*ajax.get('php/test.php', {foo: 'bar'},
+				function(data) {
+					console.log(data);
+				}
+			);*/
+			var txt = document.querySelector('.txtsug').value;
+			console.log(txt);
+			ajax.post('php/test.php',{txt:txt},function(data){
+				console.log('resultado: ',data);
+			},false);
+		}
+	</script>
+</body>
+</html>
